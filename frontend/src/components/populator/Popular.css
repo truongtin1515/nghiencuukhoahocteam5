@@ -1,0 +1,54 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia thành 4 cột */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ảnh giữ nguyên kích thước, không bị nhỏ lại */
+.popular-item img {
+    display: block;
+    margin: auto; /* Căn giữa ảnh */
+    width: auto; /* Giữ nguyên kích thước gốc */
+    height: auto; /* Giữ nguyên kích thước gốc */
+    max-width: 100%; /* Đảm bảo không bị tràn khung */
+}
+
+/* Responsive: Màn hình nhỏ hơn 1024px, hiển thị 2 ảnh/dòng */
+@media (max-width: 1024px) {
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Màn hình nhỏ hơn 600px, chỉ hiển thị 1 ảnh/dòng */
+@media (max-width: 600px) {
+    .popular-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
