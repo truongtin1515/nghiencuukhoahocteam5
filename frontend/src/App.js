@@ -8,6 +8,7 @@ import Schedule from './Pages/Schedule';
 import Training from './Pages/Training';
 import Login from './Pages/Login';
 import Cart from './Pages/Cart';
+import Gain from './Pages/Gain';
 function App() {
   return (
    <div>
@@ -21,6 +22,7 @@ function App() {
       <Route path='/schedule' element={<Schedule category="schedules"/>}/>
       <Route path='/login' element={<Login category="logins"/>}/>
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/main' element={<Gain/>}/>
       </Routes>
     </BrowserRouter>
    </div>
